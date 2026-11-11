@@ -27,3 +27,4 @@ int	ft_isalnum(int c)
 //     printf("%d\n", ft_isalnum(c));
 //     return (0);
 // }
+sdasdsd

@@ -21,10 +21,14 @@ static void	bubble_pass(t_stack *a, int comparisons)
 	int	i;
 
 	i = 0;
-	while (i < a->size)
+	while (i < a->size) 
 	{
 		if (i < comparisons && a->values[0] > a->values[1])
+		{
 			sa(a);
+			
+		}
+			
 		ra(a);
 		i++;
 	}
@@ -36,6 +40,14 @@ void	bubble_sort(t_stack *a)
 
 	if (!a || a->size < 2)
 		return ;
+	if(a->size == 2)
+	{
+		if(a->values[0] > a->values[1])
+		{
+			sa(a);
+		}return;
+	}
+		
 	pass = 0;
 	while (pass < a->size - 1 && !stack_is_sorted(a))
 	{
